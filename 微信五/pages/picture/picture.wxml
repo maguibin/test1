@@ -1,0 +1,5 @@
+<swiper indicator-color="white" indicator-active-color="#ff4c91" indicator-dots autoplay interval="3500" duration="1000" vertical circular>
+  <swiper-item wx:for="{{imgUrls}}" wx:key="*this">
+    <image src="{{item}}" mode="aspectFill" />
+  </swiper-item>
+</swiper>

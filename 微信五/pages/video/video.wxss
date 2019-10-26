@@ -1,0 +1,23 @@
+.video-list {
+  box-shadow: 0 8rpx 17rpx 0 rgba(7, 17, 27, 0.1);
+  margin: 10rpx 25rpx;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin-bottom: 30rpx;
+  background: #fff;
+}
+
+.video-title {
+  font-size: 35rpx;
+  color: #333;
+}
+
+.video-time {
+  font-size: 13px;
+  color: #979797;
+}
+
+.video-list video {
+  width: 100%;
+  margin-top: 20rpx;
+}

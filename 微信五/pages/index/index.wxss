@@ -1,0 +1,169 @@
+/**index.wxss**/
+.player {
+  position: fixed;
+  top: 20rpx;
+  right: 20rpx;
+
+  z-index: 1;
+}
+
+.player > image:first-child {
+  width: 80rpx;
+  height: 80rpx;
+  /* 为唱片图标设置旋转动画 */
+  animation: musicRotate 3s linear infinite;
+}
+
+@keyframes musicRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.player > image:last-child {
+  width: 28rpx;
+  height: 80rpx;
+  margin-left: -5px;
+}
+
+/* 播放状态 class为.player-play */
+
+.player-play > image:first-child {
+  animation-play-state: running;
+}
+
+.player-play > image:last-child {
+  animation: musicStart 0.2s linear forwards;
+}
+
+/* 暂停状态 class为.player-pause */
+
+.player-pause > image:first-child {
+  animation-play-state: paused;
+}
+
+.player-pause > image:last-child {
+  animation: musicStop 0.2s linear forwards;
+}
+
+@keyframes musicStart {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes musicStop {
+  from {
+    transform: rotate(20deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* 背景图 */
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* 内容区域 */
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 顶部gif图 */
+
+.content-gif {
+  width: 19vh;
+  height: 18.6vh;
+  margin-bottom: 1.5vh;
+}
+
+/* 标题 */
+
+.content-title {
+  font-size: 5vh;
+  color: #ff4c91;
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+
+/* 头像 */
+
+.content-avatar image {
+  width: 24vh;
+  height: 24vh;
+  border: 3px solid #ff4c91;
+  border-radius: 50%;
+}
+
+/* 新郎新娘信息 */
+
+.content-info {
+  width: 45vw;
+  text-align: center;
+  margin-top: 4vh;
+  display: flex;
+  align-items: center;
+}
+
+.content-name {
+  color: #ff4c91;
+  font-size: 2.7vh;
+  line-height: 4.5vh;
+  font-weight: bold;
+  position: relative;
+}
+
+.content-name > image {
+  width: 2.6vh;
+  height: 2.6vh;
+  border: 1px solid #ff4c91;
+  border-radius: 50%;
+  position: absolute;
+  top: -1vh;
+  right: -3.6vh;
+}
+
+.content-wedding {
+  flex: 1;
+}
+
+.content-wedding > image {
+  width: 5.5vh;
+  height: 5.5vh;
+  margin-left: 20rpx;
+}
+
+/* 婚礼信息 */
+
+.content-address {
+  margin-top: 5vh;
+  color: #ec5f89;
+  font-size: 2.5vh;
+  font-weight: bold;
+  text-align: center;
+  line-height: 4.5vh;
+}
+
+.content-address view:first-child {
+  font-size: 3vh;
+  padding-bottom: 2vh;
+}
